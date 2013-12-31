@@ -7,8 +7,8 @@
     <ProjectGuid>{5499CF00-15CA-4441-B0CA-BFB26C35B5F6}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Linq2xml</RootNamespace>
-    <AssemblyName>Linq2xml</AssemblyName>
+    <RootNamespace>Serializer</RootNamespace>
+    <AssemblyName>Serializer</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

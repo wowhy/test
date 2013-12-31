@@ -7,7 +7,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Xml.Serialization;
 
-namespace Linq2xml
+namespace Serializer
 {
     public class TestModel 
     {
