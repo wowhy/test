@@ -3,15 +3,18 @@
 
 using namespace std;
 
+class CServiceModule;
+CServiceModule *g_pModule;
+
 class CServiceModule
 {
 public:
 	CServiceModule(wstring svcname) :
-		name(svcname),
 		status({}),
 		statusHandle(nullptr),
 		stop(nullptr)
 	{
+		wcscpy_s(name, svcname.c_str());
 	}
 
 	~CServiceModule()
@@ -32,16 +35,19 @@ public:
 
 		SERVICE_TABLE_ENTRY DispatchTable[] =
 		{
-			{ L"", (LPSERVICE_MAIN_FUNCTION)this->Main },
+			{ this->name, (LPSERVICE_MAIN_FUNCTION)_Main },
 			{ NULL, NULL }
 		};
 
 		return 0;
 	}
 
-	static void WINAPI Main(DWORD dwArgc, LPTSTR *lpszArgv)
+	void WINAPI Main(DWORD dwArgc, LPTSTR *lpszArgv)
 	{
-		
+	}
+
+	void WINAPI Handler(_In_ DWORD dwOpcode)
+	{
 	}
 
 	void Install()
@@ -49,13 +55,21 @@ public:
 
 	}
 
+	static void WINAPI _Main(DWORD dwArgc, LPTSTR *lpszArgv)
+	{
+		g_pModule->Main(dwArgc, lpszArgv);
+	}
+
+	static void WINAPI _Handler(_In_ DWORD dwOpcode)
+	{
+		g_pModule->Handler(dwOpcode);
+	}
+
 private:
-	wstring name;
+	wchar_t name[256];
 	SERVICE_STATUS status;
 	SERVICE_STATUS_HANDLE statusHandle;
 	HANDLE stop;
-
-
 };
 
 CServiceModule module(L"win32 service");
