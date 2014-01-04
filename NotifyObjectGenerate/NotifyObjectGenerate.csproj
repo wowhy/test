@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NotifyObject.cs">
+    <Compile Include="Model\NotifyObject.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>NotifyObject.tt</DependentUpon>
@@ -51,7 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="NotifyObject.tt">
+    <None Include="Model\NotifyObject.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>NotifyObject.cs</LastGenOutput>
     </None>
@@ -60,7 +60,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Object.xml">
+    <Content Include="Model\Object.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
