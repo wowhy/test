@@ -2,11 +2,19 @@
 {
 	using System;
 	using System.ComponentModel;
+	using System.Runtime.CompilerServices;
 	using System.Xml;
 
-	public class TestA : INotifyPropertyChanged
+	public partial class TestA : INotifyPropertyChanged
 	{
 		public event PropertyChangedEventHandler PropertyChanged;
+        private void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
 
 		private int _Id;
 		public int Id
@@ -15,8 +23,7 @@
 			set 
 			{				
 				_Id = value;
-				if(PropertyChanged != null)
-					PropertyChanged(this, new PropertyChangedEventArgs("Id"));
+				NotifyPropertyChanged();
 			}
 		}
 
@@ -27,15 +34,21 @@
 			set 
 			{				
 				_Name = value;
-				if(PropertyChanged != null)
-					PropertyChanged(this, new PropertyChangedEventArgs("Name"));
+				NotifyPropertyChanged();
 			}
 		}
 	}
 
-	public class TestB : INotifyPropertyChanged
+	public partial class TestB : INotifyPropertyChanged
 	{
 		public event PropertyChangedEventHandler PropertyChanged;
+        private void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
 
 		private int _Id;
 		public int Id
@@ -44,8 +57,7 @@
 			set 
 			{				
 				_Id = value;
-				if(PropertyChanged != null)
-					PropertyChanged(this, new PropertyChangedEventArgs("Id"));
+				NotifyPropertyChanged();
 			}
 		}
 
@@ -56,8 +68,7 @@
 			set 
 			{				
 				_Name = value;
-				if(PropertyChanged != null)
-					PropertyChanged(this, new PropertyChangedEventArgs("Name"));
+				NotifyPropertyChanged();
 			}
 		}
 	}
