@@ -10,6 +10,7 @@
 <#@ output extension=".cs" #>
 <#
 	var filename = "Object.xml";
+	var net45 = false;
 
 	var filepath = Host.ResolvePath(filename);	
 	var xml = XElement.Load(filepath);
@@ -29,6 +30,14 @@ namespace <#=_namespace #>
 {
 	using System;
 	using System.ComponentModel;
+<#
+	if(net45)
+	{
+#>
+	using System.Runtime.CompilerServices;
+<#
+	}
+#>
 <#
     foreach(var s in _usings)
 	{
@@ -51,6 +60,20 @@ namespace <#=_namespace #>
 	{
 		public event PropertyChangedEventHandler PropertyChanged;
 <#
+	if(net45)
+	{
+#>
+        private void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+<#
+	}
+#>
+<#
 	foreach(var prop in propertys)
 	{
 		var propType = prop.Attribute("type").Value;
@@ -62,10 +85,23 @@ namespace <#=_namespace #>
 		{
 			get { return _<#=propName#>; }
 			set 
-			{
+			{				
 				_<#=propName#> = value;
+<#
+		if(!net45)
+		{
+#>
 				if(PropertyChanged != null)
 					PropertyChanged(this, new PropertyChangedEventArgs("<#=propName #>"));
+<#
+		}
+		else
+		{
+#>
+				NotifyPropertyChanged();
+<#
+		}
+#>
 			}
 		}
 <#

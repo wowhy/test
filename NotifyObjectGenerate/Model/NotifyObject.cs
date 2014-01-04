@@ -13,7 +13,7 @@
 		{
 			get { return _Id; }
 			set 
-			{
+			{				
 				_Id = value;
 				if(PropertyChanged != null)
 					PropertyChanged(this, new PropertyChangedEventArgs("Id"));
@@ -25,7 +25,7 @@
 		{
 			get { return _Name; }
 			set 
-			{
+			{				
 				_Name = value;
 				if(PropertyChanged != null)
 					PropertyChanged(this, new PropertyChangedEventArgs("Name"));
@@ -42,7 +42,7 @@
 		{
 			get { return _Id; }
 			set 
-			{
+			{				
 				_Id = value;
 				if(PropertyChanged != null)
 					PropertyChanged(this, new PropertyChangedEventArgs("Id"));
@@ -54,7 +54,7 @@
 		{
 			get { return _Name; }
 			set 
-			{
+			{				
 				_Name = value;
 				if(PropertyChanged != null)
 					PropertyChanged(this, new PropertyChangedEventArgs("Name"));
