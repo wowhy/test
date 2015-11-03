@@ -888,6 +888,7 @@
     <Content Include="_assets\css\bootstrap-theme.min.css" />
     <Content Include="_assets\css\bootstrap.css" />
     <Content Include="_assets\css\bootstrap.min.css" />
+    <Content Include="_assets\css\site.css" />
     <Content Include="_assets\css\ui-bootstrap-csp.css" />
     <Content Include="_assets\js\angular-ui\ui-bootstrap-tpls.js" />
     <Content Include="_assets\js\angular-ui\ui-bootstrap-tpls.min.js" />
