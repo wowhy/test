@@ -94,6 +94,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
+    <Content Include="app\index.html" />
+    <Content Include="app\main.js" />
+    <Content Include="app\modules\index\about.html" />
+    <Content Include="app\modules\index\aboutController.js" />
+    <Content Include="app\modules\index\helpController.js" />
+    <Content Include="app\modules\index\indexController.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -965,13 +971,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\components\config\" />
+    <Folder Include="app\components\configs\" />
     <Folder Include="app\components\directives\" />
     <Folder Include="app\components\filters\" />
     <Folder Include="app\components\services\" />
+    <Folder Include="app\components\utilities\" />
     <Folder Include="app\framework\" />
     <Folder Include="app\models\" />
-    <Folder Include="app\modules\" />
     <Folder Include="app\templates\" />
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
