@@ -93,6 +93,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\app.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -881,6 +882,48 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <Content Include="_assets\css\angular-csp.css" />
+    <Content Include="_assets\css\bootstrap-notify.css" />
+    <Content Include="_assets\css\bootstrap-theme.css" />
+    <Content Include="_assets\css\bootstrap-theme.min.css" />
+    <Content Include="_assets\css\bootstrap.css" />
+    <Content Include="_assets\css\bootstrap.min.css" />
+    <Content Include="_assets\css\ui-bootstrap-csp.css" />
+    <Content Include="_assets\js\angular-ui\ui-bootstrap-tpls.js" />
+    <Content Include="_assets\js\angular-ui\ui-bootstrap-tpls.min.js" />
+    <Content Include="_assets\js\angular-ui\ui-bootstrap.js" />
+    <Content Include="_assets\js\angular-ui\ui-bootstrap.min.js" />
+    <Content Include="_assets\js\angular\angular-animate.js" />
+    <Content Include="_assets\js\angular\angular-animate.min.js" />
+    <Content Include="_assets\js\angular\angular-aria.js" />
+    <Content Include="_assets\js\angular\angular-aria.min.js" />
+    <Content Include="_assets\js\angular\angular-cookies.js" />
+    <Content Include="_assets\js\angular\angular-cookies.min.js" />
+    <Content Include="_assets\js\angular\angular-loader.js" />
+    <Content Include="_assets\js\angular\angular-loader.min.js" />
+    <Content Include="_assets\js\angular\angular-message-format.js" />
+    <Content Include="_assets\js\angular\angular-message-format.min.js" />
+    <Content Include="_assets\js\angular\angular-messages.js" />
+    <Content Include="_assets\js\angular\angular-messages.min.js" />
+    <Content Include="_assets\js\angular\angular-mocks.js" />
+    <Content Include="_assets\js\angular\angular-resource.js" />
+    <Content Include="_assets\js\angular\angular-resource.min.js" />
+    <Content Include="_assets\js\angular\angular-route.js" />
+    <Content Include="_assets\js\angular\angular-route.min.js" />
+    <Content Include="_assets\js\angular\angular-sanitize.js" />
+    <Content Include="_assets\js\angular\angular-sanitize.min.js" />
+    <Content Include="_assets\js\angular\angular-scenario.js" />
+    <Content Include="_assets\js\angular\angular-touch.js" />
+    <Content Include="_assets\js\angular\angular-touch.min.js" />
+    <Content Include="_assets\js\angular\angular.js" />
+    <Content Include="_assets\js\angular\angular.min.js" />
+    <Content Include="_assets\js\angular\angularAMD.js" />
+    <Content Include="_assets\js\bootstrap-notify.js" />
+    <Content Include="_assets\js\bootstrap.js" />
+    <Content Include="_assets\js\bootstrap.min.js" />
+    <Content Include="_assets\js\jquery-2.1.4.js" />
+    <Content Include="_assets\js\jquery-2.1.4.min.js" />
+    <Content Include="_assets\js\require.js" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
@@ -921,9 +964,18 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="app\components\config\" />
+    <Folder Include="app\components\directives\" />
+    <Folder Include="app\components\filters\" />
+    <Folder Include="app\components\services\" />
+    <Folder Include="app\framework\" />
+    <Folder Include="app\models\" />
+    <Folder Include="app\modules\" />
+    <Folder Include="app\templates\" />
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+    <Folder Include="_assets\img\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
