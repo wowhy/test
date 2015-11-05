@@ -6,37 +6,42 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <title>示例网站 | </title>
+    <title ng-bind="'示例网站 | ' + $state.current.data.pageTitle"></title>
 
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp" />
 
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
 
-    <link href="../assets/css/site.css" rel="stylesheet" />
     <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
     <link href="../assets/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" />
     <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
-    <link href="../assets/css/components-rounded.css" rel="stylesheet" type="text/css" />
-    <link href="../assets/css/plugins.css" rel="stylesheet" type="text/css" />
-    <link href="../assets/css/layout.css" rel="stylesheet" />
+    <link href="../assets/css/metronic.min.css" rel="stylesheet" />
     <link href="../assets/css/themes/default.css" rel="stylesheet" />
 
     <!-- script -->
-    <script data-main="main.js" src="../assets/plugins/require.js"></script>
+    <script data-main="main.js" src="../assets/plugins/require.min.js"></script>
 </head>
-<body class="page-on-load">
+<body ng-controller="AppController" class="page-on-load">
     <div ng-spinner-bar class="page-spinner-bar">
         <div class="bounce1"></div>
         <div class="bounce2"></div>
         <div class="bounce3"></div>
     </div>
 
-    <header></header>
-    <main>
-        <div ui-view></div>
+    <header ng-include="'templates/header.html'" data-ng-controller="HeaderController" class="page-header"></header>
+    <div class="clearfix"></div>
+    <main class="page-container">
+        <div data-ng-include="'templates/page-head.html'" data-ng-controller="PageHeadController" class="page-head">
+        </div>
+        <div class="page-content">
+            <div class="container">
+                <div ui-view class="fade-in-up">
+                </div>
+            </div>
+        </div>
     </main>
-    <footer></footer>
+    <footer data-ng-include="'templates/footer.html'" data-ng-controller="FooterController"></footer>
 </body>
 </html>

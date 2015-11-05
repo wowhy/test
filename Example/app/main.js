@@ -35,11 +35,8 @@
         'angular-ui-bootstrap': ['angular'],
         'angular-ui-grid': ['angular', 'css!../assets/plugins/angular-ui-grid/css/ui-grid.min'],
 
-        // components
-        'SpinnerBar': ['app']
-
         // modules
     },
 
-    deps: ['app', 'ngload!SpinnerBar']
+    deps: ['app']
 });

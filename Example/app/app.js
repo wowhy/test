@@ -1,38 +1,64 @@
-﻿// bootstrap
-define(['angularAMD', 'angular-locale', 'angular-ui-router'], function (angularAMD) {
+﻿/// <reference path="C:\Users\wowhy\Documents\Visual Studio 2013\Projects\test\Example\assets/plugins/angular/angular.min.js" />
+define(['angularAMD', 'angular-locale', 'angular-ui-router', 'angular-ui-bootstrap', 'SpinnerBar'], function (angularAMD) {
+    // 模块
+    var app = angular.module('app', ['ngLocale', 'ui.router', 'ui.bootstrap', 'ui.SpinnerBar']);
 
-    // routes
-    var registerRoutes = function ($stateProvider, $urlRouterProvider) {
+    //#region 全局设置
+    app.factory('settings', ['$rootScope', function ($rootScope) {
+        var settings = {
+        };
 
-        // default
-        $urlRouterProvider.otherwise('/home');
+        $rootScope.settings = settings;
 
-        // route
+        return settings;
+    }]);
+    //#endregion
+    
+    //#region 配置路由
+    app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+        // 默认路由
+        $urlRouterProvider.otherwise('/dashboard');
+
+        // 路由
         $stateProvider
-
-            // home
-            .state('home', angularAMD.route({
-                url: '/home',
-                templateUrl: 'modules/index/home.html',
-                controller: 'homeController',
-                controllerUrl: 'modules/index/home.js'
+            // dashboard
+            .state('dashboard', angularAMD.route({
+                url: '/dashboard',
+                templateUrl: 'modules/index/dashboard.html',
+                data: { pageTitle: '仪表板', pageSubTitle: '统计 & 报表' },
+                controller: 'DashboardController',
+                controllerUrl: 'modules/index/DashboardController.js'
             }))
 
             // home
             .state('about', angularAMD.route({
                 url: '/about',
                 templateUrl: 'modules/index/about.html',
+                data: { pageTitle: '关于', pageSubTitle: 'howonder' },
                 controllerUrl: 'modules/index/about.js'
             }))
         ;
-    };
+    }]);
+    //#endregion
 
-    // module
-    var app = angular.module('app', ['ngLocale', 'ui.router']);
+    //#region 主控制程序
+    app.controller('AppController', ['$scope', function ($scope) {
+    }]);
 
-    // config
-    app.config(['$stateProvider', '$urlRouterProvider', registerRoutes]);
+    app.controller('HeaderController', ['$scope', function ($scope) {
+    }]);
 
-    // bootstrap
+    app.controller('PageHeadController', ['$scope', function ($scope) {
+    }]);
+
+    app.controller('FooterController', ['$scope', function ($scope) {
+    }]);
+    //#endregion
+
+    app.run(['$rootScope', '$state', 'settings', function ($rootScope, $state, settings) {
+        $rootScope.$state = $state;
+    }])
+
+    // 引导
     return angularAMD.bootstrap(app);
 });
