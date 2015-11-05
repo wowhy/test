@@ -18,7 +18,10 @@
         'ngload': '../assets/plugins/angular/ngload.min',
 
         'angular-ui-bootstrap': '../assets/plugins/angular-ui-bootstrap/ui-bootstrap-tpls.min',
-        'angular-ui-grid': '../assets/plugins/angular-ui-grid/ui-grid.min'
+        'angular-ui-grid': '../assets/plugins/angular-ui-grid/ui-grid.min',
+
+        // components
+        'SpinnerBar': 'components/directives/SpinnerBar'
     },
     shim: {
         'jQuery': { exports: '$' },
@@ -27,10 +30,16 @@
         'angularAMD': ['angular'],
         'angular-locale': ['angular'],
         'angular-ui-router': ['angular'],
+        'angular-ui-event': ['angular'],
 
         'angular-ui-bootstrap': ['angular'],
-        'angular-ui-grid': ['angular', 'css!../assets/plugins/angular-ui-grid/css/ui-grid.min']
+        'angular-ui-grid': ['angular', 'css!../assets/plugins/angular-ui-grid/css/ui-grid.min'],
+
+        // components
+        'SpinnerBar': ['app']
+
+        // modules
     },
 
-    deps: ['app']
+    deps: ['app', 'ngload!SpinnerBar']
 });

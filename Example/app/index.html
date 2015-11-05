@@ -1,21 +1,42 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <!-- meta -->
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <!-- title -->
-    <title></title>
+    <title>示例网站 | </title>
 
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+    <link href="../assets/css/site.css" rel="stylesheet" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../assets/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" />
     <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="../assets/plugins/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" />
+
+    <link href="../assets/css/components-rounded.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/layout.css" rel="stylesheet" />
+    <link href="../assets/css/themes/default.css" rel="stylesheet" />
 
     <!-- script -->
     <script data-main="main.js" src="../assets/plugins/require.js"></script>
 </head>
-<body>
-    <header>Header</header>
-    <!-- content -->
-    <div ui-view></div>
+<body class="page-on-load">
+    <div ng-spinner-bar class="page-spinner-bar">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+
+    <header></header>
+    <main>
+        <div ui-view></div>
+    </main>
+    <footer></footer>
 </body>
 </html>
