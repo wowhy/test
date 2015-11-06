@@ -26,8 +26,8 @@ define(['angularAMD', 'angular-locale', 'angular-animate', 'angular-ui-router', 
                 url: '/dashboard',
                 templateUrl: 'modules/index/dashboard.html',
                 data: { pageTitle: '仪表板', pageSubTitle: '统计 & 报表' },
-                controller: 'DashboardController',
-                controllerUrl: 'modules/index/DashboardController.js'
+                controllerUrl: 'modules/index/DashboardController.js',
+                controller: 'DashboardController'
             }))
 
             // home
