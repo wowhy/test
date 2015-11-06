@@ -18553,10 +18553,10 @@ Page Header
     width: 255px;
   }
   .page-header .page-header-top .top-menu .navbar-nav > li.dropdown-extended.dropdown-notification > .dropdown-menu {
-    margin-right: -160px;
+    margin-right: -100px;
   }
   .page-header .page-header-top .top-menu .navbar-nav > li.dropdown-extended.dropdown-notification > .dropdown-menu:after, .page-header .page-header-top .top-menu .navbar-nav > li.dropdown-extended.dropdown-notification > .dropdown-menu:before {
-    margin-right: 160px;
+    margin-right: 105px;
   }
   .page-header .page-header-top .top-menu .navbar-nav > li.dropdown-extended.dropdown-inbox {
     margin-right: 0;
@@ -19358,9 +19358,8 @@ Theme Panel
 
 .theme-panel {
   z-index: 999;
-  min-width: 675px;
-  padding: 20px 10px;
-  font-family: "Open Sans", sans-serif;
+  min-width: 350px;
+  padding: 20px;
 }
 .theme-panel h3 {
   margin: 8px 0 8px 0;
