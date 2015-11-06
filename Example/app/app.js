@@ -1,7 +1,7 @@
 ﻿/// <reference path="C:\Users\wowhy\Documents\Visual Studio 2013\Projects\test\Example\assets/plugins/angular/angular.min.js" />
-define(['angularAMD', 'angular-locale', 'angular-ui-router', 'angular-ui-bootstrap', 'SpinnerBar'], function (angularAMD) {
+define(['angularAMD', 'angular-locale', 'angular-animate', 'angular-ui-router', 'angular-ui-bootstrap', 'SpinnerBar', 'Menu'], function (angularAMD) {
     // 模块
-    var app = angular.module('app', ['ngLocale', 'ui.router', 'ui.bootstrap', 'ui.SpinnerBar']);
+    var app = angular.module('app', ['ngLocale', 'ui.router', 'ui.bootstrap', 'ui.SpinnerBar', 'ui.Menu']);
 
     //#region 全局设置
     app.factory('settings', ['$rootScope', function ($rootScope) {
@@ -46,6 +46,16 @@ define(['angularAMD', 'angular-locale', 'angular-ui-router', 'angular-ui-bootstr
     }]);
 
     app.controller('HeaderController', ['$scope', function ($scope) {
+        $scope.$on('$includeContentLoaded', function ($element) {
+            $(".page-header .menu-toggler").on("click", function (event) {
+                var menu = $(".page-header .page-header-menu");
+                if (menu.is(":visible")) {
+                    menu.slideUp(300);
+                } else {
+                    menu.slideDown(300);
+                }
+            });
+        });
     }]);
 
     app.controller('PageHeadController', ['$scope', function ($scope) {

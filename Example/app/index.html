@@ -24,16 +24,18 @@
     <script data-main="main.js" src="../assets/plugins/require.min.js"></script>
 </head>
 <body ng-controller="AppController" class="page-on-load">
-    <div ng-spinner-bar class="page-spinner-bar">
+    <div ui-spinner-bar class="page-spinner-bar">
         <div class="bounce1"></div>
         <div class="bounce2"></div>
         <div class="bounce3"></div>
     </div>
 
-    <header ng-include="'templates/header.html'" data-ng-controller="HeaderController" class="page-header"></header>
-    <div class="clearfix"></div>
+    <header ng-include="'templates/header.html'"
+            ng-controller="HeaderController"></header>
     <main class="page-container">
-        <div data-ng-include="'templates/page-head.html'" data-ng-controller="PageHeadController" class="page-head">
+        <div ng-include="'templates/page-head.html'"
+             ng-controller="PageHeadController"
+             class="page-head">
         </div>
         <div class="page-content">
             <div class="container">
@@ -42,6 +44,7 @@
             </div>
         </div>
     </main>
-    <footer data-ng-include="'templates/footer.html'" data-ng-controller="FooterController"></footer>
+    <footer ng-include="'templates/footer.html'"
+            ng-controller="FooterController"></footer>
 </body>
 </html>

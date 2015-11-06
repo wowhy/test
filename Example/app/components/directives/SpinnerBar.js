@@ -1,7 +1,7 @@
 ﻿define(['angularAMD'], function (angularAMD) {
     var SpinnerBar = angular.module('ui.SpinnerBar', []);
     
-    SpinnerBar.directive('ngSpinnerBar', ['$rootScope',
+    SpinnerBar.directive('uiSpinnerBar', ['$rootScope',
         function ($rootScope) {
             return {
                 link: function (scope, element, attrs) {

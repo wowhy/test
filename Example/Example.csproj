@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\components\directives\Menu.js" />
     <Content Include="app\components\directives\SpinnerBar.js" />
     <Content Include="app\modules\index\dashboard.html" />
     <Content Include="app\modules\index\DashboardController.js" />
@@ -86,9 +87,23 @@
     <Content Include="assets\css\themes\red-sunglo.css" />
     <Content Include="assets\css\themes\yellow-crusta.css" />
     <Content Include="assets\css\themes\yellow-orange.css" />
+    <Content Include="assets\img\ajax-loading.gif" />
+    <Content Include="assets\img\ajax-modal-loading.gif" />
+    <Content Include="assets\img\avatar.png" />
+    <Content Include="assets\img\icon-color-close.png" />
+    <Content Include="assets\img\icon-color.png" />
+    <Content Include="assets\img\loading-spinner-blue.gif" />
+    <Content Include="assets\img\loading-spinner-default.gif" />
+    <Content Include="assets\img\loading-spinner-grey.gif" />
+    <Content Include="assets\img\loading.gif" />
+    <Content Include="assets\img\logo-big.png" />
+    <Content Include="assets\img\logo-default.png" />
+    <Content Include="assets\img\logo.png" />
+    <Content Include="assets\img\menu-toggler.png" />
     <Content Include="assets\plugins\angular-ui-grid\css\ui-grid.eot" />
     <Content Include="assets\plugins\angular-ui-grid\css\ui-grid.ttf" />
     <Content Include="assets\plugins\angular-ui-grid\css\ui-grid.woff" />
+    <Content Include="assets\plugins\angular\angular-animate.min.js" />
     <Content Include="assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.woff" />
@@ -96,7 +111,7 @@
     <Content Include="assets\plugins\font-awesome\fonts\fontawesome-webfont.ttf" />
     <Content Include="assets\plugins\font-awesome\fonts\fontawesome-webfont.woff" />
     <Content Include="assets\plugins\font-awesome\fonts\fontawesome-webfont.woff2" />
-    <Content Include="assets\plugins\font-awesome\fonts\FontAwesome.otf" />    
+    <Content Include="assets\plugins\font-awesome\fonts\FontAwesome.otf" />
     <Content Include="assets\plugins\simple-line-icons\fonts\Simple-Line-Icons.eot" />
     <Content Include="assets\plugins\simple-line-icons\fonts\Simple-Line-Icons.ttf" />
     <Content Include="assets\plugins\simple-line-icons\fonts\Simple-Line-Icons.woff" />
@@ -152,7 +167,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\components\services\" />
-    <Folder Include="assets\img\" />
+    <Folder Include="app\modules\demo\" />
     <Folder Include="assets\js\" />
   </ItemGroup>
   <PropertyGroup>
