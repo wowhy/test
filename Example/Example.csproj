@@ -57,10 +57,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\components\directives\Menu.js" />
-    <Content Include="app\components\directives\SpinnerBar.js" />
+    <Content Include="app\components\directives\menu.js" />
+    <Content Include="app\components\directives\spinnerBar.js" />
     <Content Include="app\modules\index\dashboard.html" />
-    <Content Include="app\modules\index\DashboardController.js" />
+    <Content Include="app\modules\index\dashboardController.js" />
     <Content Include="app\templates\footer.html" />
     <Content Include="app\templates\header.html" />
     <Content Include="app\templates\page-head.html" />

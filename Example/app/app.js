@@ -46,16 +46,6 @@ define(['angularAMD', 'angular-locale', 'angular-animate', 'angular-ui-router', 
     }]);
 
     app.controller('HeaderController', ['$scope', function ($scope) {
-        $scope.$on('$includeContentLoaded', function ($element) {
-            $(".page-header .menu-toggler").on("click", function (event) {
-                var menu = $(".page-header .page-header-menu");
-                if (menu.is(":visible")) {
-                    menu.slideUp(300);
-                } else {
-                    menu.slideDown(300);
-                }
-            });
-        });
     }]);
 
     app.controller('PageHeadController', ['$scope', function ($scope) {
